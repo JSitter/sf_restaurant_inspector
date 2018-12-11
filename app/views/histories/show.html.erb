@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Buisiness name:</strong>
+  <%= @history.buisiness_name %>
+</p>
+
+<p>
+  <strong>Api:</strong>
+  <%= @history.api_id %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @history.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @history.long %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @history.address %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @history.zip %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
