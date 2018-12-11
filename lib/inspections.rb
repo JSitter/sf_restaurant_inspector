@@ -10,7 +10,7 @@ class Inspections
 
     url = '/resource/sipz-fjte.json?business_name=${name}'
     uri = URI.encode(url)
-    get(uri)
+    return get(uri).body
 
   end
 
