@@ -10,16 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_10_234121) do
+ActiveRecord::Schema.define(version: 2018_12_11_061139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "histories", force: :cascade do |t|
+    t.string "buisiness_name"
+    t.string "api_id"
+    t.string "lat"
+    t.string "long"
+    t.string "address"
+    t.string "zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_histories_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "password"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_token"
   end
 
+  add_foreign_key "histories", "users"
 end
