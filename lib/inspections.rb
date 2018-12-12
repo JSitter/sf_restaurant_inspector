@@ -2,7 +2,7 @@ require 'httparty'
 
 class Inspections
   include HTTParty
-  format :json
+  format :plain
   base_uri 'data.sfgov.org'
 
   def self.get_by_name(name)
@@ -11,7 +11,7 @@ class Inspections
     uri = URI.encode(base_uri + url)
     response = get(uri)
     puts response
-    return response
+    return response.body
 
   end
 
