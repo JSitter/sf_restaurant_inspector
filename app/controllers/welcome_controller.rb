@@ -4,8 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def search
-    
-    response = Inspections.get_by_name(params[:name])
+    response = Inspections.get_by_name(params[:q])
     
     render :json => response
   end
