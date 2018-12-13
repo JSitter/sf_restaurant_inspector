@@ -5,6 +5,27 @@ This application uses an api provided by the city of San Francisco that allows f
 
 The api documentation is provided at [https://dev.socrata.com/foundry/data.sfgov.org/sipz-fjte](this site)
 
+## Available Routes
+
+### Index
+
+### /
+
+Method: `GET`
+
+#### Parameters:
+ No parameters
+
+### Search
+
+### /search
+
+Method: `POST`
+
+#### Parameters:
+ * q: Restaurant Name
+
+ 
 
 * Ruby version 2.5.x 
 
